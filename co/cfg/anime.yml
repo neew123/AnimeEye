@@ -1,0 +1,23 @@
+CONFIG_NAME: 'anime_inpaint'
+
+DATASET_NAME: 'anime'
+DATA_DIR: '/home/yuanmengli/gitRepository/AnimeEncoder/'
+GPU_ID: '1,5'
+WORKERS: 4
+
+
+TRAIN:
+    FLAG: True
+    NET_G: '' #'../output/anime_2stages_2021_12_24_13_26_03/Model/netG_47000.pth'
+    NET_D: ''    #'../output/anime_2stages_2021_12_24_13_26_03/Model/netD'
+    NET_ENCODER: './AutoEncoder_490.pth'    # '../output/anime_2stages_2021_11_16_20_10_58/Model/netD'
+    Lambda_recon: 1
+    Lambda_percep: 1
+    BATCH_SIZE: 32
+    MAX_EPOCH: 500
+    VIS_COUNT: 32
+    SNAPSHOT_INTERVAL: 1000
+    DISCRIMINATOR_LR: 0.0001
+    GENERATOR_LR: 0.0001
+
+
